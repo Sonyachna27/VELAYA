@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	animationHeader();
 	accordionFunction();
 	addAnimationInit();
-	toggleIngredients();
+ requestAnimationFrame(() => {
+    toggleIngredients();
+  });
 });
 
 setTimeout(function () {
@@ -99,7 +101,7 @@ const toggleIngredients = () => {
     allIngredient.forEach((item, index) => {
       const newItem = item.cloneNode(true);
       item.replaceWith(newItem);
-      allIngredient[index] = newItem; // Оновлюємо посилання на новий DOM-елемент
+      allIngredient[index] = newItem; 
     });
   };
 
@@ -151,7 +153,7 @@ const toggleIngredients = () => {
   const openIngredient = () => {
     allIngredient = Array.from(document.querySelectorAll('.ingredients__item'));
     if (allIngredient.length === 0) return;
-
+console.log('init!');
     groupByRow();
     setActiveItems();
     setWidths();
