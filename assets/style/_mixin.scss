@@ -27,13 +27,13 @@ text-transform: uppercase;
 	}
 }
 @mixin titleH3{
-font-size: 25px;
+font-size: 20px;
 font-style: normal;
 font-weight: 700;
-line-height: 120%; /* 36px */
+line-height: 120%; /* 28.8px */
 text-transform: uppercase;
 	@media screen and (min-width:768px) {
-		font-size: 30px;
+		font-size: 24px;
 	}
 }
 @mixin titleH4{
@@ -58,6 +58,9 @@ letter-spacing: 0.2px;
 font-style: normal;
 font-weight: 500;
 line-height: 150%;
+@media screen and (min-width:768px) {
+	font-size: 18px;
+}
 }
 @mixin p1{
 font-size: 18px;
