@@ -1,0 +1,93 @@
+@mixin titleH1{
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 120%; /* 76.8px */
+	text-transform: uppercase;
+	strong{
+		font-weight: 400;
+		font-style: italic;
+	}
+	@media screen and (min-width:767px) {
+		font-size: 64px;
+	}
+}
+@mixin titleH2{
+font-size: 40px;
+font-style: normal;
+font-weight: 800;
+line-height: 120%; /* 72px */
+text-transform: uppercase;
+	@media screen and (min-width:767px) {
+		font-size: 60px;
+	}
+	strong{
+		font-style: italic;
+		font-weight: 400;
+	}
+}
+@mixin titleH3{
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 36px */
+text-transform: uppercase;
+	@media screen and (min-width:768px) {
+		font-size: 30px;
+	}
+}
+@mixin titleH4{
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 150%; /* 37.5px */
+	letter-spacing: 0.25px;
+	@media screen and (min-width:768px) {
+		font-size: 25px;
+	}
+}
+@mixin titleH5{
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.2px;
+}
+@mixin p2{
+	font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%;
+}
+@mixin p1{
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+@media screen and (min-width:768px) {
+	font-size: 20px;
+}
+}
+
+@mixin list{
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 140%; 
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	 li{
+		position: relative;
+		padding-left: 42px;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 32px;
+			height: 32px;
+			background: url('../images/list_img-black.svg') center center / cover no-repeat; 
+		}
+	}
+}
