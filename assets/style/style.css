@@ -787,7 +787,9 @@ body {
 .ingredients__wrap {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
 }
 .ingredients__item {
   display: flex;
@@ -796,7 +798,7 @@ body {
   flex-direction: column;
   position: relative;
   color: #fff;
-  transition: width 0.3s linear;
+  transition: min-width 0.3s ease;
   padding: 60px 30px 30px 30px;
   width: 100%;
   height: -moz-fit-content;
@@ -807,12 +809,16 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 12px;
-    width: 18.8%;
     height: 660px;
+    min-width: 252px;
+    width: 252px;
   }
 }
-.ingredients__item.active {
-  width: 39%;
+@media screen and (min-width: 1024px) {
+  .ingredients__item.active {
+    min-width: 524px;
+    width: 524px;
+  }
 }
 .ingredients__item.active img {
   filter: grayscale(0.5);

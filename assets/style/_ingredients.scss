@@ -2,7 +2,9 @@
 	&__wrap{
 		display: flex;
 		gap: 20px;
-		flex-wrap: wrap;
+		width: 100%;
+		overflow: hidden;
+		overflow-x: auto;
 	}
 	&__item{
 			display: flex;
@@ -10,21 +12,28 @@
 		gap: 40px;
 		flex-direction: column;
 		position: relative;
-	
 		color: $--white;
-		transition: width .3s linear;
+		transition: min-width .3s ease;
 		padding: 60px 30px 30px 30px;
 		width: 100%;
 		height: fit-content;
+		
 		@media screen and (min-width:1024px) {
 			overflow-y: auto;
 		overflow-x: hidden;
 		border-radius: 12px;
-		width: 18.8%;
 		height: 660px;
+		// flex: 1 1;
+		min-width: 252px;
+		width: 252px;
 		}
 		&.active {
-			width: 39%;
+			@media screen and (min-width:1024px) {
+			
+			// flex: 2.33 1;
+			min-width: 524px;
+				width: 524px;
+			}
 			img{
 				filter:grayscale(.5);
 			}
