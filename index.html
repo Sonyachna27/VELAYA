@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./assets/style/aos.css">
+	<link rel="stylesheet" href="./assets/style/swiper.css">
 	<link rel="stylesheet" href="./assets/style/style.css">
 	<title>Document</title>
 </head>
@@ -23,24 +24,21 @@
 		<div class="header__bottom">
 			<div class="container"> 
 				<div class="header__wrap">
+					<div class="burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 					<a href="#" class="logo">
 						<img src="./assets/images/logo.svg" alt="VELAYA Cosmetics">
 					</a>
-					<div class="header__menu__wrap">
+				
 					<div class="header__menu">
 						<nav>
 							<ul>
 								<li><a href="#">STORY</a></li>
 								<li><a href="#">PRODUCTS</a></li>
 								<li><a href="#">Ingredients</a></li>
-							</ul>
-						</nav>
-						
-					</div>
-					<div class="header__menu">
-						<nav>
-							<ul>
-								<li class="current_page_item"><a href="./index.html">Home</a></li>
 								<li><a href="#">Reviews</a></li>
 								<li><a href="#">cONTACTS</a></li>
 								<li><a href="#">faq</a></li>
@@ -48,12 +46,25 @@
 						</nav>
 						
 					</div>
+					<div class="header__basket">
+						<svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23" fill="none">
+							<g clip-path="url(#clip0_352_34)">
+							<mask id="mask0_352_34" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="23">
+							<path d="M0 0H19V23H0V0Z" fill="white"/>
+							</mask>
+							<g mask="url(#mask0_352_34)">
+							<path d="M4.87998 10.85V5.67C4.87998 2.82 6.94998 0.5 9.49998 0.5C12.05 0.5 14.11 2.82 14.11 5.68V10.86M2.80998 22.5H16.19C17.55 22.5 18.62 21.19 18.49 19.67L17.61 9.32C17.5 7.99 16.5 6.98 15.31 6.98H3.68998C2.49998 6.98 1.50998 7.99 1.38998 9.32L0.509979 19.67C0.379979 21.19 1.44998 22.5 2.80998 22.5Z" stroke="#242526" stroke-linecap="round" stroke-linejoin="round"/>
+							</g>
+							</g>
+							<defs>
+							<clipPath id="clip0_352_34">
+							<rect width="19" height="23" fill="white"/>
+							</clipPath>
+							</defs>
+							</svg>
+						<span>0</span>
 					</div>
-					<div class="burger">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
+					
 				</div>
 			</div>
 			</div>
@@ -135,7 +146,7 @@
 					<div class="ingredients__wrap">
 						<div class="ingredients__item">
 							<img src="./assets/images/ingredients.jpg" alt="Tea Tree">
-							<span>Tea Tree</span>
+							<span>Cinnamon</span>
 							<div class="ingredients__item__inner">
 								<ul>
 									<li>Natural antioxidant</li>
@@ -148,7 +159,7 @@
 						<div class="ingredients__item">
 						
 							<img src="./assets/images/ingredients2.jpg" alt="Tea Tree">
-							<span>Tea Tree</span>
+							<span>sweet orange</span>
 								<div class="ingredients__item__inner">
 								<ul>
 									<li>Natural antioxidant</li>
@@ -160,7 +171,7 @@
 						</div>
 						<div class="ingredients__item">
 							<img src="./assets/images/ingredients2.jpg" alt="Tea Tree">
-							<span>Tea Tree</span>
+							<span>Vanilla Spice Mix</span>
 								<div class="ingredients__item__inner">
 								<ul>
 									<li>Natural antioxidant</li>
@@ -243,6 +254,198 @@
 								</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</section>
+		<section class="products pb-m">
+			<div class="container">
+				<div class="products__container">
+					<div class="products__title center-title">
+						<h2>Perfect hair with <strong> velaya</strong></h2>
+						<p>Achieve glowing, flawless hair with VELAYA. Crafted for pure radiance and care.</p>
+					</div>
+					<div class="products__slider">
+						<div class="swiper productSlider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide product__slide">
+									<div class="product__slide__img">
+										<img src="./assets/images/product-img1.png" alt="Soft shampoo, soft mask ">
+									</div>
+									<div class="product__slide__content">
+										<div class="product__slide__content__title">Soft shampoo, soft mask </div>
+										<p>Soft shampoo and mask for all hair types. Gentle daily care that cleanses, hydrates, and leaves hair light, soft, and balanced — never weighed down.</p>
+										<ul class="product__slide__content__list">
+											<li>
+												<img src="./assets/images/product-ingredients.svg" alt="Cinnamon">
+												Cinnamon
+											</li>
+											<li>
+												<img src="./assets/images/product-ingredients2.svg" alt="500 ml">
+												500 ml
+											</li>
+										</ul>
+										<button class="product__slide__btn btn white-btn">ADD TO CARD</button>
+									</div>
+								</div>
+								<div class="swiper-slide product__slide">
+									<div class="product__slide__img">
+										<img src="./assets/images/product-img1.png" alt="Soft shampoo, soft mask ">
+									</div>
+									<div class="product__slide__content">
+										<div class="product__slide__content__title">Color conserve shampoo </div>
+										<p>Soft shampoo and mask for all hair types. Gentle daily care that cleanses, hydrates, and leaves hair light, soft, and balanced — never weighed down.</p>
+										<ul class="product__slide__content__list">
+											<li>
+												<img src="./assets/images/product-ingredients.svg" alt="Cinnamon">
+												Cinnamon
+											</li>
+											<li>
+												<img src="./assets/images/product-ingredients2.svg" alt="500 ml">
+												500 ml
+											</li>
+										</ul>
+										<button class="product__slide__btn btn white-btn">ADD TO CARD</button>
+									</div>
+								</div>
+								<div class="swiper-slide product__slide">
+									<div class="product__slide__img">
+										<img src="./assets/images/ingredients.jpg" alt="Soft shampoo, soft mask ">
+									</div>
+									<div class="product__slide__content">
+										<div class="product__slide__content__title">Soft shampoo, soft mask </div>
+										<p>Soft shampoo and mask for all hair types. Gentle daily care that cleanses, hydrates, and leaves hair light, soft, and balanced — never weighed down.</p>
+										<ul class="product__slide__content__list">
+											<li>
+												<img src="./assets/images/product-ingredients.svg" alt="Cinnamon">
+												Cinnamon
+											</li>
+											<li>
+												<img src="./assets/images/product-ingredients2.svg" alt="500 ml">
+												500 ml
+											</li>
+										</ul>
+										<button class="product__slide__btn btn white-btn">ADD TO CARD</button>
+									</div>
+								</div>
+								<div class="swiper-slide product__slide">
+									<div class="product__slide__img">
+										<img src="./assets/images/product-img1.png" alt="Soft shampoo, soft mask ">
+									</div>
+									<div class="product__slide__content">
+										<div class="product__slide__content__title">Soft shampoo, soft mask </div>
+										<p>Soft shampoo and mask for all hair types. Gentle daily care that cleanses, hydrates, and leaves hair light, soft, and balanced — never weighed down.</p>
+										<ul class="product__slide__content__list">
+											<li>
+												<img src="./assets/images/product-ingredients.svg" alt="Cinnamon">
+												Cinnamon
+											</li>
+											<li>
+												<img src="./assets/images/product-ingredients2.svg" alt="500 ml">
+												500 ml
+											</li>
+										</ul>
+										<button class="product__slide__btn btn white-btn">ADD TO CARD</button>
+									</div>
+								</div>
+								<div class="swiper-slide product__slide">
+									<div class="product__slide__img">
+										<img src="./assets/images/product-img1.png" alt="Soft shampoo, soft mask ">
+									</div>
+									<div class="product__slide__content">
+										<div class="product__slide__content__title">Soft shampoo, soft mask </div>
+										<p>Soft shampoo and mask for all hair types. Gentle daily care that cleanses, hydrates, and leaves hair light, soft, and balanced — never weighed down.</p>
+										<ul class="product__slide__content__list">
+											<li>
+												<img src="./assets/images/product-ingredients.svg" alt="Cinnamon">
+												Cinnamon
+											</li>
+											<li>
+												<img src="./assets/images/product-ingredients2.svg" alt="500 ml">
+												500 ml
+											</li>
+										</ul>
+										<button class="product__slide__btn btn white-btn">ADD TO CARD</button>
+									</div>
+								</div>
+								<div class="swiper-slide product__slide">
+									<div class="product__slide__img">
+										<img src="./assets/images/product-img1.png" alt="Soft shampoo, soft mask ">
+									</div>
+									<div class="product__slide__content">
+										<div class="product__slide__content__title">Soft shampoo, soft mask </div>
+										<p>Soft shampoo and mask for all hair types. Gentle daily care that cleanses, hydrates, and leaves hair light, soft, and balanced — never weighed down.</p>
+										<ul class="product__slide__content__list">
+											<li>
+												<img src="./assets/images/product-ingredients.svg" alt="Cinnamon">
+												Cinnamon
+											</li>
+											<li>
+												<img src="./assets/images/product-ingredients2.svg" alt="500 ml">
+												500 ml
+											</li>
+										</ul>
+										<button class="product__slide__btn btn white-btn">ADD TO CARD</button>
+									</div>
+								</div>
+							</div>
+							<div class="product-pagination"></div>
+							<div class="product-button-prev product-arrow white-btn">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+								<g clip-path="url(#clip0_98_6)">
+								<path d="M18.0054 9.69231L0.00540197 9.69231M0.00540197 9.69231C0.00540197 9.69231 8.39868 9.69231 8.39868 1.38462M0.00540197 9.69231C0.00540197 9.69231 8.39868 9.69231 8.39868 18" stroke="#242526"/>
+								</g>
+								<defs>
+								<clipPath id="clip0_98_6">
+								<rect width="18" height="18" fill="white" transform="translate(0 18) rotate(-90)"/>
+								</clipPath>
+								</defs>
+								</svg>
+							</div>
+							<div class="product-button-next product-arrow white-btn">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+									<g clip-path="url(#clip0_100_10)">
+									<path d="M-0.00536243 8.30769L17.9946 8.30769M17.9946 8.30769C17.9946 8.30769 9.60135 8.30769 9.60135 16.6154M17.9946 8.30769C17.9946 8.30769 9.60135 8.30769 9.60135 -1.00089e-07" stroke="#242526"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_100_10">
+									<rect width="18" height="18" fill="white" transform="translate(18) rotate(90)"/>
+									</clipPath>
+									</defs>
+									</svg>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="action pb-s">
+			<div class="container">
+				<div class="action__container">
+					<div class="action__title justify-title">
+						<h2>SEE ME IN <strong>ACTION =</strong></h2>
+						<div class="action__title__btns">
+							<a href="#" class="btn">
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="13" viewBox="0 0 11 13" fill="none">
+								<path d="M11 3.14774V5.3884C10.6176 5.35015 10.1206 5.26119 9.5709 5.055C8.8531 4.78562 8.31882 4.41732 7.96885 4.13214V8.66085L7.95992 8.64671C7.9656 8.7365 7.96885 8.82796 7.96885 8.92025C7.96885 11.1692 6.18166 13 3.98442 13C1.78719 13 0 11.1692 0 8.92025C0 6.67127 1.78719 4.83968 3.98442 4.83968C4.1996 4.83968 4.41072 4.85713 4.61697 4.89122V7.09946C4.41884 7.02712 4.2061 6.98804 3.98442 6.98804C2.94427 6.98804 2.09737 7.85437 2.09737 8.92025C2.09737 9.98612 2.94427 10.8525 3.98442 10.8525C5.02458 10.8525 5.87148 9.98529 5.87148 8.92025C5.87148 8.88034 5.87067 8.84043 5.86824 8.80053V0H8.05492C8.06304 0.189562 8.07035 0.380797 8.07847 0.570359C8.09309 0.943664 8.223 1.30201 8.44954 1.5955C8.71506 1.94054 9.10725 2.34126 9.65778 2.66136C10.1734 2.95984 10.6573 3.08871 11 3.14941V3.14774Z" fill="#242526"/>
+								</svg>
+								velaya_cos</a>
+							<a href="#" class="btn">
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+									<g clip-path="url(#clip0_106_110)">
+									<path d="M4.14458 0.852282C3.53941 0.880834 3.12614 0.977407 2.76486 1.11937C2.39095 1.26509 2.07403 1.46063 1.75871 1.77709C1.44338 2.09355 1.24921 2.4107 1.10451 2.78517C0.964485 3.14724 0.869612 3.56085 0.84288 4.16636C0.816149 4.77186 0.810234 4.96649 0.813192 6.51105C0.816149 8.05556 0.822974 8.24915 0.852322 8.85593C0.881214 9.46097 0.977452 9.87415 1.11941 10.2355C1.26536 10.6094 1.46067 10.9262 1.77725 11.2416C2.09383 11.5571 2.41075 11.7508 2.78613 11.8958C3.14787 12.0356 3.56159 12.1308 4.16699 12.1574C4.77238 12.1839 4.96724 12.19 6.51132 12.1871C8.05545 12.1841 8.24985 12.1773 8.85647 12.1485C9.46313 12.1197 9.87409 12.0228 10.2356 11.8815C10.6095 11.7352 10.9266 11.5403 11.2417 11.2236C11.557 10.9069 11.751 10.5895 11.8956 10.2148C12.0358 9.85308 12.131 9.43936 12.1573 8.83442C12.1838 8.22732 12.19 8.03351 12.1871 6.48917C12.1841 4.94488 12.1772 4.75127 12.1484 4.14474C12.1196 3.53821 12.0233 3.12631 11.8814 2.76469C11.7353 2.39079 11.5402 2.07421 11.2237 1.75855C10.9072 1.44288 10.5896 1.24893 10.215 1.1047C9.85308 0.964667 9.43957 0.869231 8.8342 0.843069C8.22878 0.816901 8.03395 0.810189 6.48927 0.813147C4.9446 0.816105 4.75122 0.822702 4.14458 0.852282ZM4.21101 11.1342C3.65646 11.1101 3.35535 11.0179 3.15469 10.9408C2.88897 10.8384 2.69968 10.7147 2.4997 10.5166C2.29972 10.3185 2.17687 10.1286 2.07312 9.86343C1.9952 9.66279 1.90136 9.36201 1.87542 8.80745C1.84721 8.20809 1.8413 8.02815 1.838 6.50964C1.8347 4.99117 1.8405 4.81144 1.86678 4.21186C1.89044 3.65776 1.98314 3.35632 2.06016 3.15577C2.16253 2.88971 2.28584 2.70076 2.48434 2.5009C2.68284 2.30104 2.87224 2.17796 3.13763 2.07421C3.33806 1.99595 3.63883 1.9029 4.19315 1.87651C4.79297 1.84807 4.9727 1.84238 6.49095 1.83909C8.00925 1.83579 8.1894 1.84147 8.78946 1.86786C9.34359 1.89198 9.64513 1.98378 9.84544 2.06124C10.1113 2.16363 10.3004 2.28659 10.5003 2.48543C10.7002 2.68427 10.8234 2.87299 10.9271 3.13894C11.0055 3.3388 11.0985 3.63945 11.1247 4.19411C11.1533 4.79393 11.1597 4.97377 11.1625 6.49193C11.1652 8.01006 11.1598 8.19038 11.1336 8.78974C11.1094 9.34424 11.0174 9.64546 10.9402 9.84636C10.8378 10.112 10.7144 10.3014 10.5158 10.5011C10.3172 10.7009 10.128 10.824 9.8625 10.9277C9.6623 11.0059 9.36119 11.0991 8.80734 11.1255C8.2075 11.1537 8.02777 11.1596 6.50894 11.1629C4.99011 11.1662 4.81083 11.1601 4.21101 11.1342ZM8.84769 3.46029C8.84796 3.59529 8.88821 3.72719 8.96339 3.83931C9.03857 3.95143 9.14534 4.03873 9.27014 4.09017C9.39499 4.14161 9.53225 4.15489 9.66458 4.12831C9.79696 4.10174 9.91846 4.03651 10.0137 3.94088C10.109 3.84525 10.1738 3.7235 10.1999 3.59105C10.226 3.45859 10.2122 3.32138 10.1603 3.19676C10.1084 3.07214 10.0207 2.9657 9.90833 2.89092C9.79593 2.81614 9.66387 2.77636 9.52889 2.77663C9.34792 2.777 9.17448 2.84922 9.04675 2.97743C8.91903 3.10563 8.84742 3.27932 8.84769 3.46029ZM3.57979 6.5058C3.58298 8.11883 4.89296 9.42343 6.50563 9.42034C8.11834 9.41731 9.42386 8.10745 9.42083 6.49442C9.41774 4.88141 8.1074 3.57643 6.49447 3.57962C4.88159 3.5828 3.57672 4.89301 3.57979 6.5058ZM4.60425 6.50374C4.60352 6.12874 4.71398 5.76198 4.92169 5.44982C5.1294 5.13761 5.42501 4.89402 5.77119 4.74983C6.11731 4.60565 6.49848 4.56735 6.86638 4.63978C7.23428 4.7122 7.5725 4.8921 7.83813 5.15673C8.10382 5.42133 8.28506 5.75879 8.35894 6.12642C8.43283 6.49404 8.39605 6.87532 8.25321 7.22204C8.11043 7.56877 7.86798 7.86538 7.55663 8.0743C7.24528 8.28322 6.8789 8.39519 6.50395 8.39589C6.25495 8.39643 6.00833 8.3479 5.77807 8.25311C5.54786 8.15826 5.33855 8.01905 5.16215 7.84334C4.98574 7.66762 4.84567 7.45886 4.74995 7.22903C4.65423 6.9992 4.60472 6.75274 4.60425 6.50374Z" fill="#242526"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_106_110">
+									<rect width="13" height="13" fill="white"/>
+									</clipPath>
+									</defs>
+									</svg>
+								velaya_cos
+							</a>
+						</div>
+					</div>
+					<div class="action__content"></div>
 				</div>
 			</div>
 		</section>
@@ -425,6 +628,7 @@
 	</footer>
 	<script src="./assets/js/query.js"></script>
 	<script src="./assets/js/aos.js"></script>
+	<script src="./assets/js/swiper.js"></script>
 	<script src="./assets/js/script.js"></script>
 </body>
 </html>

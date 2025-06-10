@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	accordionFunction();
 	addAnimationInit();
 	openIngredient();
+	productSliderInit();
 //  requestAnimationFrame(() => {
 //     toggleIngredients();
 //   });
@@ -93,6 +94,7 @@ const accordionFunction = () => {
 };
 
 const openIngredient = () => {
+	if (window.innerWidth >= 1024) {
 	const allIngredient = document.querySelectorAll('.ingredients__item');
 
 	if (allIngredient.length === 0) return;
@@ -101,7 +103,6 @@ const openIngredient = () => {
 		const activeItem = document.querySelector('.ingredients__item.active') || allIngredient[0];
 		const parentWidth = activeItem.parentElement.clientWidth;
 		const activeWidth = parentWidth * 0.39;
-		console.log(parentWidth);
 
 		allIngredient.forEach((item) => {
 			const inner = item.querySelector('.ingredients__item__inner');
@@ -116,119 +117,54 @@ const openIngredient = () => {
 		allIngredient[index].classList.add('active');
 	};
 
-	// Ініціалізація: ставимо перший активним та виставляємо ширину
 	setActive(0);
 	setWidths();
 
-	// Наведення мишки — просто змінюємо активний елемент
 	allIngredient.forEach((item, index) => {
 		item.addEventListener('mouseover', () => {
 			setActive(index);
 		});
 	});
 
-	// При зміні розміру — оновлюємо ширину
 	window.addEventListener('resize', setWidths);
 };
-
-
-// const toggleIngredients = () => {
-//   let isIngredientEnabled = false;
-//   let allIngredient = [];
-//   let rows = new Map();
-
-//   const clearListeners = () => {
-//     allIngredient.forEach((item, index) => {
-//       const newItem = item.cloneNode(true);
-//       item.replaceWith(newItem);
-//       allIngredient[index] = newItem; 
-//     });
-//   };
-
-//   const groupByRow = () => {
-//     rows.clear();
-//     allIngredient.forEach((item) => {
-//       const top = item.offsetTop;
-//       if (!rows.has(top)) rows.set(top, []);
-//       rows.get(top).push(item);
-//     });
-//   };
-
-//   const setActiveItems = () => {
-//     rows.forEach((itemsInRow) => {
-//       itemsInRow.forEach((item) => item.classList.remove('active'));
-//       if (itemsInRow.length > 0) itemsInRow[0].classList.add('active');
-//     });
-//   };
-
-//   const setWidths = () => {
-//     rows.forEach((itemsInRow) => {
-//       const activeItem = itemsInRow.find((el) => el.classList.contains('active')) || itemsInRow[0];
-//       const parentWidth = activeItem?.parentElement?.clientWidth || 0;
-//       const activeWidth = parentWidth * 0.39;
-
-//       itemsInRow.forEach((item) => {
-//         const inner = item.querySelector('.ingredients__item__inner');
-//         if (inner) {
-//           inner.style.width = `calc(${activeWidth}px - 60px)`;
-//         }
-//       });
-//     });
-//   };
-
-//   const addEventListeners = () => {
-//     allIngredient.forEach((item) => {
-//       item.addEventListener('mouseover', () => {
-//         const top = item.offsetTop;
-//         const itemsInRow = rows.get(top);
-//         if (!itemsInRow) return;
-
-//         itemsInRow.forEach((el) => el.classList.remove('active'));
-//         item.classList.add('active');
-//         setWidths();
-//       });
-//     });
-//   };
-
-//   const openIngredient = () => {
-//     allIngredient = Array.from(document.querySelectorAll('.ingredients__item'));
-//     if (allIngredient.length === 0) return;
-//     groupByRow();
-//     setActiveItems();
-//     setWidths();
-//     addEventListeners();
-//   };
-
-//   const initIngredient = () => {
-//     clearListeners(); 
-//     openIngredient();
-//     isIngredientEnabled = true;
-//   };
-
-//   const destroyIngredient = () => {
-//     if (isIngredientEnabled) {
-//       clearListeners();
-//       rows.clear();
-//       isIngredientEnabled = false;
-//     }
-//   };
-
-//   const handleResize = () => {
-//     if (window.innerWidth > 1024) {
-//       initIngredient();
-//     } else {
-//       destroyIngredient();
-//     }
-//   };
-
-//   handleResize();
-
-//   let resizeTimeout;
-//   window.addEventListener('resize', () => {
-//     clearTimeout(resizeTimeout);
-//     resizeTimeout = setTimeout(handleResize, 150);
-//   });
-// };
+};
+const productSliderInit = () =>{
+	const productSliderWrap = document.querySelector('.productSlider');
+	if(!productSliderWrap) return;
+	var productSlider = new Swiper(productSliderWrap, {
+		  slidesPerView: 1,
+  		spaceBetween: 10,
+			centeredSlides: true,
+    	loop: true,
+      navigation: {
+        nextEl: ".product-button-next",
+        prevEl: ".product-button-prev",
+      },
+			 pagination: {
+        el: ".product-pagination",
+				clickable: true,
+      },
+			breakpoints: {
+    414: {
+      slidesPerView:1.5,
+      spaceBetween: 10
+    },
+    550: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    768: {
+      slidesPerView: 2.5,
+      spaceBetween: 10
+    },
+    1024: {
+      slidesPerView: 3.5,
+      spaceBetween: 20
+    }
+  },
+    });
+}
 
 
 

@@ -5,8 +5,14 @@
 		gap: 40px;
 		justify-content: space-between;
 		flex-direction: column;
+		padding-bottom: 60px;
+		border-bottom: .5px solid $--border-color;
 		@media screen and (min-width:1024px) {
 			flex-direction: row;
+		}
+		@media screen and (min-width:768px) {
+			flex-direction: row;
+			padding-bottom: 90px;
 		}
 	}
 	&__info{
@@ -23,9 +29,13 @@
 	}
 	&__items{
 		display: flex;
-		gap: 40px;
+		gap: 20px;
+		flex-wrap: wrap;
 		@media screen and (min-width:1024px) {
 			width: 58%;
+		}
+		@media screen and (min-width:768px) {
+			gap: 40px;
 		}
 	}
 	&__item{
@@ -36,6 +46,23 @@
 		border-radius: 18px;
 		border: 1px solid rgba(0, 0, 0, 0.20);
 		background: #FFF;
+		margin-top: 45px;
+		position: relative;
+		width: 100%;
+		@media screen and (min-width:768px) {
+			margin-top: 48px;
+			width: calc((100% / 2) - 40px);
+		}
+		&::before{
+			content: '';
+			width: 37px;
+			height: 64px;
+			transform:translateX(-50%) rotate(30deg);
+			background: url('../images/formulas-img.svg') center center / cover no-repeat;
+			position:absolute;
+			top: -45px;
+			left: 50%;
+		}
 		 div{
 			@include titleH3;
 		 }

@@ -27,11 +27,14 @@
 
 $--white: #fff;
 $--black: #000;
+$--black-gray:#242526;
 $--body-bg: #FFFBF4; 
 $--dark-grey:#9A958B;
 $--text-color:#242526;
 $--silver:#EAE8E6;
 $--hover-color:#9A958B;
+$--border-color:rgba(36, 37, 38, 0.40);
+
 
 html.open{
 	overflow: hidden;
@@ -69,6 +72,26 @@ body{
   inherits: false;
   initial-value: #6B6B6B;
 }
+@property --color-gradient-initial-top-white {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #FFF;
+}
+@property --color-gradient-result-top-white {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --color-gradient-initial-bottom-white {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --color-gradient-result-bottom-white {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #fff;
+}
 .btn{
 	padding: 18px 40px;
 	color: $--white;
@@ -92,18 +115,48 @@ body{
 	linear-gradient(180deg, var(--color-gradient-initial-top) 0%, var(--color-gradient-result-top) 100%), 
 	linear-gradient(180deg, var(--color-gradient-initial-bottom) 3.85%, var(--color-gradient-result-bottom) 108.46%);
 
-	 transition: --color-gradient-initial-top 0.3s, --color-gradient-result-top 0.3s,--color-gradient-initial-bottom .3s, --color-gradient-result-bottom .3s ;
+	 transition: --color-gradient-initial-top 0.3s linear, --color-gradient-result-top 0.3s linear,--color-gradient-initial-bottom .3s linear, --color-gradient-result-bottom .3s linear ;
 	@media screen and (max-width:767px) {
 		width: 100%;
 	}
 	&:hover{
 		border-color: transparent;
-		--color-gradient-initial-top: #F00;
-		--color-gradient-result-top: #D90000;
+		--color-gradient-initial-top: #242526;
+		--color-gradient-result-top: #6B6B6B;
+		--color-gradient-initial-bottom:#242526 ;
+		--color-gradient-result-bottom:#6B6B6B;
 		color: $--white;
 }
 }
-
+.white-btn{
+	background:
+	linear-gradient(180deg, var(--color-gradient-initial-top-white) 0%, var(--color-gradient-result-top-white) 100%), 
+	linear-gradient(180deg, var(--color-gradient-initial-bottom-white) 3.85%, var(--color-gradient-result-bottom-white) 108.46%);
+	 transition: --color-gradient-initial-top-white 0.3s linear, --color-gradient-result-top-white 0.3s linear,--color-gradient-initial-bottom-white .3s linear, --color-gradient-result-bottom-white .3s linear ;
+	&:hover{
+		border-color: transparent;
+		--color-gradient-initial-top-white: #242526;
+		--color-gradient-result-top-white: #6B6B6B;
+		--color-gradient-initial-bottom-white:#242526 ;
+		--color-gradient-result-bottom-white:#6B6B6B;
+		color: $--white;
+}
+}
+.pb-m{
+		padding: 80px 0;
+	@media screen and (min-width:768px) {
+		padding: 130px 0;
+}
+border-bottom: .5px solid $--border-color;
+}
+.pb-m{
+		padding: 60px 0;
+	@media screen and (min-width:768px) {
+		padding: 90px 0;
+}
+border-bottom: .5px solid $--border-color;
+border-top: .5px solid $--border-color;
+}
 .p-m{
 	padding: 80px 0;
 	@media screen and (min-width:768px) {
@@ -168,6 +221,7 @@ body{
 			align-items: center;
 	h2{
 		@include titleH2;
+	
 	}
 	@media screen and (min-width:768px) {
 		margin-bottom: 60px;

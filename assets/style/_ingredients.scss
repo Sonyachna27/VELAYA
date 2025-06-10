@@ -1,10 +1,18 @@
 .ingredients{
+	overflow: hidden;
 	&__wrap{
 		display: flex;
-		gap: 20px;
+		gap: 10px;
 		width: 100%;
 		overflow: hidden;
 		overflow-x: auto;
+		@media screen and (min-width:768px) {
+			gap: 20px;
+		}
+		@media screen and (max-width:767.9px) {
+			width: 100vw;
+			margin-right: -16px;
+		}
 	}
 	&__item{
 			display: flex;
@@ -14,23 +22,31 @@
 		position: relative;
 		color: $--white;
 		transition: min-width .3s ease;
-		padding: 60px 30px 30px 30px;
+		padding: 30px 20px;
 		width: 100%;
 		height: fit-content;
-		
+		border-radius: 12px;
+		height: auto;
 		@media screen and (min-width:1024px) {
 			overflow-y: auto;
 		overflow-x: hidden;
 		border-radius: 12px;
 		height: 660px;
-		// flex: 1 1;
 		min-width: 18%;
 		width: 252px;
 		}
+		@media screen and (min-width:768px) and (max-width:1023.9px){
+			min-width: 40%;
+		}
+		@media screen and (min-width:768px){
+		padding: 60px 30px 30px 30px;
+		}
+		@media screen and  (max-width:767.9px){
+			min-width: 89%;
+			aspect-ratio: 323 / 373;
+		}
 		&.active {
 			@media screen and (min-width:1024px) {
-			
-			// flex: 2.33 1;
 			min-width: 40%;
 				width: 524px;
 			}
@@ -58,10 +74,21 @@
 			object-fit: cover;
 		}
 		span{
-			@include titleH3;
+			font-size: 28px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 120%; /* 33.6px */
+			text-transform: uppercase;
 			color: $--white;
-			word-wrap: nowrap;
-			white-space: nowrap;
+			
+			@media screen and (min-width:768px) {
+				font-size: 30px;
+			}
+			@media screen and (min-width:1024px) {
+					word-wrap: nowrap;
+					white-space: nowrap;
+			}
+
 		}
 		&:before{
 			content: '';
@@ -89,6 +116,7 @@
 			}
 			ul{
 				@include list;
+			
 				width: 100%;
 				li:before{
 				background: url('../images/list_img.svg') center center / cover no-repeat;
