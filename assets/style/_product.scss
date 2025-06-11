@@ -27,6 +27,7 @@ background-color: $--silver;
 		height: 100%;
 		gap: 14px;
 		opacity: 0.4;
+		height: auto;
 		&.swiper-slide-prev,
 		&.swiper-slide-active,
 		&.swiper-slide-next{
@@ -39,7 +40,7 @@ background-color: $--silver;
 			justify-content: center;
 			max-height: 330px;
 			height: 100%;
-			padding: 53px 53px 0 53px;
+			// padding: 53px 53px 0 53px;
 			border-radius: 500px 500px 0px 0px;
 			background: linear-gradient(180deg, #FFF 0%, #EAE8E6 100%);
 			@media screen and (min-width:768px) {
@@ -47,12 +48,15 @@ background-color: $--silver;
 			}
 			
 			img{
-				max-width: 385px;
-				max-height: 270px;
+				// max-width: 385px;
+				// max-height: 270px;
+				border-radius: inherit;
 				height: 100%;
-				@media screen and (min-width:768px) {
-				max-height: 359px;
-			}
+				max-width: 100%;
+				width: 100%;
+			// 	@media screen and (min-width:768px) {
+			// 	max-height: 359px;
+			// }
 			}
 		}
 		&__content{

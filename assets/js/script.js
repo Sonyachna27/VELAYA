@@ -133,7 +133,7 @@ const productSliderInit = () =>{
 	const productSliderWrap = document.querySelector('.productSlider');
 	if(!productSliderWrap) return;
 	var productSlider = new Swiper(productSliderWrap, {
-		  slidesPerView: 1,
+		  slidesPerView: 1.3,
   		spaceBetween: 10,
 			centeredSlides: true,
     	loop: true,
