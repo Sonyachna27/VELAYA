@@ -1,31 +1,53 @@
 .faq{
-	&__item{
-		padding: 20px;
-		background-color: $--white;
-		border-bottom: 1px solid #E2E8F0;
-		@media screen and (min-width:768px) {
-			padding: 40px;
+	&__container{
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		justify-content: space-between;
+	@media screen and (min-width:1024px) {
+		flex-direction: row;
+	}	
+	}
+	&__title{
+		h2{
+			@include titleH2;
+			margin-bottom: 10px;
 		}
-		&:hover{
-			.faq__item__top{
+		p{
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 140%;
+			@media screen and (min-width:768px) {
+				font-size: 20px;
 			}
-			.faq-icon-wrapper{
-				background-color: #DDE9FF;
-			}
+		}
+		@media screen and (min-width:1024px) {
+			width: 30%;
+		}
+	}
+	&__items{
+		@media screen and (min-width:1024px) {
+			width: 59%;
+		}
+	}
+	&__item{
+		padding: 20px 0;
+		border-bottom: .5px solid $--border-color;
+		@media screen and (min-width:768px) {
+			padding: 32px 0;
 		}
 		&__top{
-		@include titleH4;
+		@include p4;
 			display: flex;
 			gap: 20px;
 			align-items: center;
 			justify-content: space-between;
 			transition: .3s linear;
-			.active &{
-			}
+		
 		}
 &-bottom{
-			@include p1;
-			margin-bottom: 10px;
+			@include p2;
 			ul{
 				display: flex;
 				flex-direction: column;
@@ -33,41 +55,37 @@
 				list-style-position: inside;
 				list-style-type: square;
 				margin-bottom: 10px;
-			
 			}
 }
 	}
 	&-icon-wrapper{
 		border-radius: 500px;
 		background-color: transparent;
-		min-width: 44px;
-		min-height: 44px;
-		max-width: 44px;
-		max-height: 44px;
+		min-width: 32px;
+		min-height: 32px;
+		max-width: 32px;
+		max-height: 32px;
 		position: relative;
-	transition: .3s linear;
-		.active &{
-			background-color: #DDE9FF;
-		}
-		&:before,
+		transition: .3s linear;
+		border: 1px solid $--black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+			@media screen and (min-width:768px) {
+				min-width: 40px;
+				min-height: 40px;
+				max-width: 40px;
+				max-height: 40px;
+			} 
+
 		&::after{
-			position: absolute;
-			top: 50%;
-			left: 50%;
 			content: '';
-			width: 14px;
-			height: 2px;
+			width: 13px;
+			height: 13px;
 			transition: .3s linear;
+			background: url('../images/arrow-down.svg') center center / cover no-repeat;
 		}
-		&:after{
-			transform: translate(-50%, -50%);
-		}
-		&:before{
-			transform: translate(-50%, -50%) rotate(90deg);
-			.active &{
-				transform: translate(-50%, -50%) rotate(180deg);
-			}
-		}
+	
 	}
 	
 }

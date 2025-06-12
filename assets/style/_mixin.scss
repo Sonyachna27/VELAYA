@@ -71,7 +71,27 @@ line-height: 140%;
 	font-size: 20px;
 }
 }
-
+@mixin p2{
+	font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+}
+@mixin p3{
+	font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+}
+@mixin p4{
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%;
+@media screen and (min-width:768px) {
+	font-size: 20px;
+}
+}
 @mixin list{
 	font-size: 16px;
 	font-style: normal;

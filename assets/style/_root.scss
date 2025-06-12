@@ -93,6 +93,26 @@ body{
   inherits: false;
   initial-value: #fff;
 }
+@property --color-gradient-initial-top-svg {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: transparent;
+}
+@property --color-gradient-result-top-svg {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: transparent;
+}
+@property --color-gradient-initial-bottom-svg {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: transparent;
+}
+@property --color-gradient-result-bottom-svg {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: transparent;
+}
 .btn{
 	padding: 18px 40px;
 	color: $--white;
@@ -151,15 +171,14 @@ body{
 border-bottom: .5px solid $--border-color;
 }
 .pb-m{
-		padding: 60px 0;
+		padding-bottom: 60px;
 	@media screen and (min-width:768px) {
-		padding: 90px 0;
+		padding-bottom: 90px;
 }
 border-bottom: .5px solid $--border-color;
-border-top: .5px solid $--border-color;
 }
 .p-m{
-	padding: 80px 0;
+	padding-bottom: 80px 0;
 	@media screen and (min-width:768px) {
 		padding: 160px 0;
 	}
@@ -177,6 +196,12 @@ border-top: .5px solid $--border-color;
 	margin-bottom: 90px;
 	@media screen and (min-width:768px) {
 		margin-bottom: 180px;
+	}
+}
+.mb-s{
+	margin-bottom: 60px;
+	@media screen and (min-width:768px) {
+		margin-bottom: 90px;
 	}
 }
 
@@ -228,4 +253,30 @@ border-top: .5px solid $--border-color;
 		margin-bottom: 60px;
 	}
 }
-
+.swiper-arrow{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 64px;
+		max-height: 64px;
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 1/1;
+		border-radius: 500px;
+		border: 0.5px solid #242526;
+		cursor: pointer;
+		&.swiper-button-disabled{
+			opacity: .5;
+		}
+		&:hover{
+			svg path,
+			svg rect{
+				stroke: $--white;
+			}
+		}
+		svg{
+			path{
+				transition: .3s linear;
+			}
+		}
+	}
