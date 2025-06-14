@@ -53,10 +53,13 @@
 			}
 		}
 		.logo{
-			max-width: 174px;
+			max-width: 130px;
 			max-height: fit-content;
 			z-index: 1;
 			position: relative;
+			@media screen and (min-width:768px) {
+				max-width: 174px;
+			}
 		}
 	}
 
