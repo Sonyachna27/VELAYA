@@ -1,5 +1,5 @@
 .hero{
-padding-top: 169px;
+padding-top: 80px;
 	margin-top: -30px;
 	border-radius: 0px 0px 0px 50px;
 border: 1px solid rgba(36, 37, 38, 0.20);
@@ -9,6 +9,7 @@ background-repeat: no-repeat;
 background-size: cover;
 @media screen and (min-width:768px) {
 	border-radius: 0px 0px 0px 100px;
+	padding-top: 169px;
 }
 &__container{
 	display: flex;
@@ -22,9 +23,10 @@ background-size: cover;
 &__content{
 	padding:  0 0 54px 0;
 	color: $--white;
+	text-align: center;
 		@media screen and (min-width:1024px) {
 		max-width: 455px;
-	
+		text-align: left;
 	}
 	@media screen and (min-width:768px) {
 		padding:  0 0 163px 0;

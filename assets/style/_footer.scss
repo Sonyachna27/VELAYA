@@ -131,7 +131,6 @@
 		}
 		@media screen and (max-width:1023.9px) {
 			padding: 40px 0 60px;
-			// border-top: 1px solid rgba(36, 37, 38, 0.40);
 			text-align: center;
 		}
 		div{
@@ -173,9 +172,9 @@
 					line-height: 140%;
 				}
 			}
-			button{
+			input[type="submit"]{
 				border-radius: 8px 8px 24px 8px;
-				background: $--dark-grey;
+				background-color: $--dark-grey;
 				font-size: 14px;
 				font-style: normal;
 				font-weight: 600;
@@ -185,6 +184,11 @@
 				justify-content: center;
 				color: $--white;
 				padding: 14px;
+				transition: .3s linear;
+				cursor: pointer;
+				&:hover{
+					background-color: #7D776C;
+				}
 			}
 		}
 	}
@@ -225,7 +229,6 @@
 			gap: 24px;
 			align-items: center;
 			justify-content: center;
-			width: fit-content;
 			li{
 				font-size: 16px;
 				font-style: normal;
