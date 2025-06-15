@@ -41,8 +41,10 @@
 		@media screen and (min-width:768px){
 		padding: 60px 30px 30px 30px;
 		}
-		@media screen and  (max-width:767.9px){
+		@media screen and (max-width:767.9px){
 			min-width: 89%;
+		}
+		@media screen and (max-width:1023.9px){
 			aspect-ratio: 323 / 373;
 		}
 		&.active {
@@ -80,7 +82,6 @@
 			line-height: 120%; /* 33.6px */
 			text-transform: uppercase;
 			color: $--white;
-			
 			@media screen and (min-width:768px) {
 				font-size: 30px;
 			}
@@ -112,11 +113,10 @@
 			width: 100%;
 			@media screen and (min-width:1024px) {
 				visibility: hidden;
-			opacity: 0;
+				opacity: 0;
 			}
 			ul{
 				@include list;
-			
 				width: 100%;
 				li:before{
 				background: url('../images/list_img.svg') center center / cover no-repeat;

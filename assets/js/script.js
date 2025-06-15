@@ -81,42 +81,87 @@ const accordionFunction = () => {
   });
 };
 
+// const openIngredient = () => {
+// 	if (window.innerWidth >= 1024) {
+// 	const allIngredient = document.querySelectorAll('.ingredients__item');
+
+// 	if (allIngredient.length === 0) return;
+
+// 	const setWidths = () => {
+// 		const activeItem = document.querySelector('.ingredients__item.active') || allIngredient[0];
+// 		const parentWidth = activeItem.parentElement.clientWidth;
+// 		const activeWidth = parentWidth * 0.39;
+
+// 		allIngredient.forEach((item) => {
+// 			const inner = item.querySelector('.ingredients__item__inner');
+// 			if (inner) {
+// 				inner.style.width = `calc(${activeWidth}px - 60px)`;
+// 			}
+// 		});
+// 	};
+
+// 	const setActive = (index) => {
+// 		allIngredient.forEach((item) => item.classList.remove('active'));
+// 		allIngredient[index].classList.add('active');
+// 	};
+
+// 	setActive(0);
+// 	setWidths();
+
+// 	allIngredient.forEach((item, index) => {
+// 		item.addEventListener('mouseover', () => {
+// 			setActive(index);
+// 		});
+// 	});
+
+// 	window.addEventListener('resize', setWidths);
+// };
+// };
 const openIngredient = () => {
-	if (window.innerWidth >= 1024) {
-	const allIngredient = document.querySelectorAll('.ingredients__item');
+  if (window.innerWidth <= 1024) return;
 
-	if (allIngredient.length === 0) return;
+  const allIngredient = document.querySelectorAll('.ingredients__item');
+  if (!allIngredient.length) return;
 
-	const setWidths = () => {
-		const activeItem = document.querySelector('.ingredients__item.active') || allIngredient[0];
-		const parentWidth = activeItem.parentElement.clientWidth;
-		const activeWidth = parentWidth * 0.39;
+  const parent = allIngredient[0].parentElement;
 
-		allIngredient.forEach((item) => {
-			const inner = item.querySelector('.ingredients__item__inner');
-			if (inner) {
-				inner.style.width = `calc(${activeWidth}px - 60px)`;
-			}
-		});
-	};
+  const setWidths = () => {
+    const activeItem = document.querySelector('.ingredients__item.active') || allIngredient[0];
+    const parentWidth = parent.clientWidth;
+    const activeWidth = parentWidth * 0.39;
 
-	const setActive = (index) => {
-		allIngredient.forEach((item) => item.classList.remove('active'));
-		allIngredient[index].classList.add('active');
-	};
+    allIngredient.forEach((item) => {
+      const inner = item.querySelector('.ingredients__item__inner');
+      if (inner) {
+        inner.style.width = `calc(${activeWidth}px - 60px)`;
+      }
+    });
+  };
 
-	setActive(0);
-	setWidths();
+  const setActive = (index) => {
+    allIngredient.forEach((item, i) => {
+      item.classList.toggle('active', i === index);
+    });
+    setWidths(); 
+  };
 
-	allIngredient.forEach((item, index) => {
-		item.addEventListener('mouseover', () => {
-			setActive(index);
-		});
-	});
+  setActive(0);
 
-	window.addEventListener('resize', setWidths);
+  allIngredient.forEach((item, index) => {
+    item.addEventListener('mouseover', () => setActive(index));
+  });
+
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (window.innerWidth >= 1024) {
+        setWidths();
+      }
+    }, 100); 
+  });
 };
-};
+
 const reviewsSliderInit = () =>{
 	const reviewsSliderWrap = document.querySelector('.reviewsSlider');
 	if(!reviewsSliderWrap) return;
@@ -179,8 +224,11 @@ const productSliderInit = () =>{
 				clickable: true,
       },
 			breakpoints: {
+    550: {
+      slidesPerView: 2.5,
+    },
     768: {
-      slidesPerView: 2.3,
+      slidesPerView: 3,
     },
     1024: {
       slidesPerView: 3.4,
@@ -195,7 +243,6 @@ const socialsSliderInit = () =>{
 	const socialsSlider = new Swiper(socialsSliderWrap, {
 		  slidesPerView: 1.5,
   		spaceBetween: 10,
-			// centeredSlides: true,
     	loop: true,
 			autoplay: {
 			delay: 2000,

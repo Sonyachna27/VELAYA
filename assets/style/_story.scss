@@ -10,6 +10,7 @@
 	&__img{
 		border-radius: 20px;
 		height: auto;
+		max-height: 480px;
 		aspect-ratio: 480 / 664;
 		img{
 			object-fit: cover;
