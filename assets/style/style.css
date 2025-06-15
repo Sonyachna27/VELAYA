@@ -79,6 +79,11 @@ button {
 }
 @font-face {
   font-family: "Qanelas";
+  src: url(../fonts/Qanelas-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Qanelas";
   src: url(../fonts/Qanelas-SemiBold.ttf);
   font-weight: 600;
 }
@@ -893,7 +898,7 @@ body {
   margin-top: -30px;
   border-radius: 0px 0px 0px 50px;
   border: 1px solid rgba(36, 37, 38, 0.2);
-  background-image: url("../images/hero-bg.webp");
+  background-image: url("../images/hero-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2006,7 +2011,7 @@ body {
 @media screen and (max-width: 1023.9px) {
   .footer__container hr {
     display: block;
-    width: 100vw;
+    width: calc(100vw - 21px);
     height: 1px;
     margin-left: -20px;
     color: rgba(36, 37, 38, 0.4);

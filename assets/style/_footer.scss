@@ -41,7 +41,7 @@
 			display: none;
 		@media screen and (max-width:1023.9px) {
 			display: block;
-				width: 100vw;
+				width: calc(100vw - 21px);
 			height: 1px;
 			margin-left: -20px;
 				color:rgba(36, 37, 38, 0.40);
