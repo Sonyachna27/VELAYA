@@ -14,10 +14,11 @@ background-size: cover;
 &__container{
 	display: flex;
 	flex-direction: column;
-	gap: 40px;
+	
 	justify-content: space-between;
 	@media screen and (min-width:1024px) {
 		flex-direction: row;
+		gap: 40px;
 	}
 }
 &__content{
@@ -37,7 +38,7 @@ background-size: cover;
 		text-wrap: balance;
 	}
 	p{
-		@include p1;
+		@include p3;
 		margin-bottom: 30px;
 	}
 

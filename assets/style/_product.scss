@@ -40,7 +40,6 @@
 			justify-content: center;
 			max-height: 330px;
 			height: 100%;
-			// padding: 53px 53px 0 53px;
 			border-radius: 500px 500px 0px 0px;
 			background: linear-gradient(180deg, #FFF 0%, #EAE8E6 100%);
 			@media screen and (min-width:768px) {
@@ -48,15 +47,11 @@
 			}
 			
 			img{
-				// max-width: 385px;
-				// max-height: 270px;
 				border-radius: inherit;
 				height: 100%;
 				max-width: 100%;
 				width: 100%;
-			// 	@media screen and (min-width:768px) {
-			// 	max-height: 359px;
-			// }
+			
 			}
 		}
 		&__content{
@@ -92,7 +87,7 @@
 					align-items: center;
 					justify-content: flex-start;
 					gap: 8px;
-					svg{
+					svg, img{
 						border-radius: 50%;
 						max-width: 32px;
 						max-height: 32px;
@@ -142,10 +137,10 @@
 		transform: translateY(-50%);
 		z-index: 1;
 		&.product-button-prev{
-			left: 45px;
+			left: 40px;
 		}
 		&.product-button-next{
-			right: 45px;
+			right: 40px;
 		}
 	}
 }

@@ -11,15 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 socialsSliderInit();
 });
 
-setTimeout(function () {
-	let aosOffset = 120;
-	if (window.innerWidth < 480) {
-		aosOffset = 30;
-	}
-	AOS.init({
-		offset: aosOffset
-	});
-}, 100);
 
 
 const animationHeader = () =>{
@@ -176,7 +167,7 @@ const productSliderInit = () =>{
 		}
 	const productSlider = new Swiper(productSliderWrap, {
 		  slidesPerView: 1.3,
-  		spaceBetween: 10,
+  		spaceBetween: 20,
 			centeredSlides: true,
     	loop: true,
       navigation: {
@@ -188,21 +179,11 @@ const productSliderInit = () =>{
 				clickable: true,
       },
 			breakpoints: {
-   414: {
-				slidesPerView:1.5,
-				spaceBetween: 10
-			},
-    550: {
-      slidesPerView: 2,
-      spaceBetween: 10
-    },
     768: {
-      slidesPerView: 2.5,
-      spaceBetween: 10
+      slidesPerView: 2.3,
     },
     1024: {
-      slidesPerView: 4.5,
-      spaceBetween: 20
+      slidesPerView: 3.4,
     }
   },
     });

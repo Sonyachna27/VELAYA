@@ -31,7 +31,7 @@
 		gap: 20px;
 		flex-wrap: wrap;
 		@media screen and (min-width:1024px) {
-			width: 58%;
+			width: 57%;
 		}
 		@media screen and (min-width:768px) {
 			gap: 40px;
@@ -50,7 +50,7 @@
 		width: 100%;
 		@media screen and (min-width:768px) {
 			margin-top: 48px;
-			width: calc((100% / 2) - 40px);
+			width: calc((100% / 2) - 20px);
 		}
 		&::before{
 			content: '';
@@ -64,6 +64,7 @@
 		}
 		 div{
 			@include titleH3;
+			text-wrap-style: balance;
 		 }
 		 ul{
 			@include p2;

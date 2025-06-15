@@ -291,7 +291,7 @@ body {
   }
 }
 .justify-title h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 800;
   line-height: 120%; /* 72px */
@@ -309,11 +309,16 @@ body {
   font-weight: 400;
 }
 .justify-title p {
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
   color: #000;
+}
+@media screen and (min-width: 768px) {
+  .justify-title p {
+    font-size: 20px;
+  }
 }
 @media screen and (min-width: 768px) {
   .justify-title p {
@@ -338,7 +343,7 @@ body {
   align-items: center;
 }
 .center-title h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 800;
   line-height: 120%; /* 72px */
@@ -412,7 +417,7 @@ body {
   opacity: 0.5;
 }
 .breadcrumbs h1 {
-  font-size: 40px;
+  font-size: 38px;
   font-style: normal;
   font-weight: 800;
   line-height: 120%; /* 76.8px */
@@ -777,7 +782,7 @@ body {
   }
 }
 .faq__title h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 800;
   line-height: 120%; /* 72px */
@@ -902,12 +907,12 @@ body {
 .hero__container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   justify-content: space-between;
 }
 @media screen and (min-width: 1024px) {
   .hero__container {
     flex-direction: row;
+    gap: 40px;
   }
 }
 .hero__content {
@@ -927,7 +932,7 @@ body {
   }
 }
 .hero__content h1 {
-  font-size: 40px;
+  font-size: 38px;
   font-style: normal;
   font-weight: 800;
   line-height: 120%; /* 76.8px */
@@ -945,16 +950,11 @@ body {
   }
 }
 .hero__content p {
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
   margin-bottom: 30px;
-}
-@media screen and (min-width: 768px) {
-  .hero__content p {
-    font-size: 20px;
-  }
 }
 .hero__image {
   width: 100%;
@@ -1167,6 +1167,7 @@ body {
 .story__img {
   border-radius: 20px;
   height: auto;
+  aspect-ratio: 480/664;
 }
 .story__img img {
   -o-object-fit: cover;
@@ -1193,7 +1194,7 @@ body {
   margin-bottom: 24px;
 }
 .story__content h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 800;
   line-height: 120%; /* 72px */
@@ -1261,7 +1262,7 @@ body {
   }
 }
 .story__content p {
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
@@ -1297,7 +1298,7 @@ body {
   }
 }
 .formulas__info h2 {
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 800;
   line-height: 120%; /* 72px */
@@ -1331,7 +1332,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .formulas__items {
-    width: 58%;
+    width: 57%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1354,7 +1355,7 @@ body {
 @media screen and (min-width: 768px) {
   .formulas__item {
     margin-top: 48px;
-    width: calc(50% - 40px);
+    width: calc(50% - 20px);
   }
 }
 .formulas__item::before {
@@ -1373,6 +1374,7 @@ body {
   font-weight: 700;
   line-height: 120%; /* 28.8px */
   text-transform: uppercase;
+  text-wrap-style: balance;
 }
 @media screen and (min-width: 768px) {
   .formulas__item div {
@@ -1500,7 +1502,7 @@ body {
   justify-content: flex-start;
   gap: 8px;
 }
-.product__slide__content__list li svg {
+.product__slide__content__list li svg, .product__slide__content__list li img {
   border-radius: 50%;
   max-width: 32px;
   max-height: 32px;
@@ -1546,10 +1548,10 @@ body {
   }
 }
 .productSlider .swiper-arrow.product-button-prev {
-  left: 45px;
+  left: 40px;
 }
 .productSlider .swiper-arrow.product-button-next {
-  right: 45px;
+  right: 40px;
 }
 
 .action__title__btns {
@@ -1764,20 +1766,20 @@ body {
     width: 66%;
   }
 }
-.reviews__top {
+.reviews__content__top {
   display: flex;
   flex-direction: column;
   gap: 2px;
   color: #000;
 }
-.reviews__top span {
+.reviews__content__top span {
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 140%;
 }
 @media screen and (min-width: 768px) {
-  .reviews__top span {
+  .reviews__content__top span {
     font-size: 20px;
   }
 }
@@ -2056,6 +2058,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+.footer__block ul a,
+.footer__block .footer__contacts a {
+  transition: 0.3s linear;
+}
+.footer__block ul a:hover,
+.footer__block .footer__contacts a:hover {
+  color: #9A958B;
+}
 @media screen and (min-width: 1024px) {
   .footer__block ul,
   .footer__block .footer__contacts {
@@ -2184,7 +2194,7 @@ body {
   padding: 25px 0 35px 0;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .footer__copy__container {
     flex-direction: row;
   }
@@ -2200,11 +2210,7 @@ body {
     text-align: center;
   }
 }
-.footer__copy__container nav {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .footer__copy__container nav {
     width: 22%;
   }
@@ -2223,11 +2229,19 @@ body {
   line-height: 140%; /* 22.4px */
   text-decoration-line: underline;
   text-decoration-style: solid;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 @media screen and (min-width: 1024px) {
   .footer__copy__container ul li {
     width: calc(50% - 12px);
   }
+}
+.footer__copy__container ul li a {
+  transition: 0.3s linear;
+}
+.footer__copy__container ul li a:hover {
+  color: #242526;
 }
 .footer__copy__container .lumios {
   display: flex;
@@ -2347,4 +2361,52 @@ body {
 }
 .article__date strong {
   font-weight: 800;
+}
+
+.error__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+@media screen and (min-width: 768px) {
+  .error__container {
+    padding: 120px 0;
+  }
+}
+.error__container h1 {
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 120%; /* 76.8px */
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.error__container h1 strong {
+  font-weight: 400;
+  font-style: italic;
+}
+@media screen and (min-width: 767px) {
+  .error__container h1 {
+    font-size: 64px;
+  }
+}
+.error__container p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 30px;
+}
+.error__container .btn {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .error__container .btn {
+    max-width: 214px;
+  }
 }/*# sourceMappingURL=style.css.map */

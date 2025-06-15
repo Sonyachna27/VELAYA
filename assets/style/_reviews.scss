@@ -37,10 +37,7 @@
 			padding: 30px;
 			width: 66%;
 		}
-		
-		
-	}
-	&__top{
+			&__top{
 			display: flex;
 			flex-direction: column;
 			gap: 2px;
@@ -55,6 +52,9 @@
 				}
 			}
 		}
+		
+	}
+
 		&__rating{
 			display: flex;
 			align-items: center;
