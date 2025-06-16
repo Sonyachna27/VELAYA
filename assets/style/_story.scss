@@ -10,8 +10,8 @@
 	&__img{
 		border-radius: 20px;
 		height: auto;
-		max-height: 480px;
-		aspect-ratio: 480 / 664;
+
+		width: 100%;
 		img{
 			object-fit: cover;
 			width: 100%;
@@ -20,6 +20,10 @@
 		}
 		@media screen and (min-width:1024px) {
 			width: 36%;
+		}
+		@media screen and (max-width:1023.9px) {
+					max-height: 480px;
+					aspect-ratio: 480 / 664;
 		}
 	}
 	&__content{

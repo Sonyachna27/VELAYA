@@ -9,7 +9,7 @@ background-repeat: no-repeat;
 background-size: cover;
 @media screen and (min-width:768px) {
 	border-radius: 0px 0px 0px 100px;
-	padding-top: 169px;
+	padding-top: 175px;
 }
 &__container{
 	display: flex;
@@ -59,14 +59,14 @@ background-size: cover;
 &__image{
 	width: 100%;
 	@media screen and (min-width:1024px) {
-		max-width: 548px;
+		max-width: 560px;
 		width: calc((100% / 2) - 40px) ;
 	}
 	img{
 		height: 100%;
 		width: 100%;
 		@media screen and (max-width:1023.9px) {
-				max-width: 548px;
+				max-width: 560px;
 			margin: 0 auto;
 		}
 	}
