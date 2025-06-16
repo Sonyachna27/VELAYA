@@ -37,6 +37,17 @@
 		@media screen and (min-width:768px) {
 			padding: 32px 0;
 		}
+		&.active{
+			.faq-icon-wrapper {
+				background-color: $--black;
+				svg{
+					transform: rotate(180deg);
+					path, rect{
+						stroke: $--white;
+					}
+				}
+			}
+		}
 		&__top{
 		@include p4;
 			display: flex;
@@ -78,12 +89,11 @@
 				max-height: 40px;
 			} 
 
-		&::after{
-			content: '';
+		svg{
 			width: 13px;
 			height: 13px;
 			transition: .3s linear;
-			background: url('../images/arrow-down.svg') center center / cover no-repeat;
+			
 		}
 	
 	}
