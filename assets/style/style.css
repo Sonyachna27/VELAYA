@@ -515,6 +515,7 @@ body {
   border-radius: 0px 0px 32px 32px;
   background: #EAE8E6;
   position: relative;
+  padding: 20px 0;
 }
 @media screen and (max-width: 1023.9px) {
   .header__bottom {
@@ -551,7 +552,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header__bottom .logo {
-    max-width: 174px;
+    max-width: 138px;
   }
 }
 .header__wrap {
@@ -643,7 +644,6 @@ body {
   .header__menu nav ul li a {
     height: 100%;
     display: inline-block;
-    padding: 31px 0px;
   }
   .header__menu nav ul li a:hover {
     color: #9A958B;
@@ -1621,6 +1621,12 @@ body {
     max-width: fit-content;
   }
 }
+.action__btn svg path {
+  transition: 0.3s linear;
+}
+.action__btn:hover svg path {
+  fill: #fff;
+}
 .action__rows {
   display: flex;
   flex-direction: column;
@@ -2297,17 +2303,16 @@ body {
   text-decoration-style: solid;
   max-width: -moz-fit-content;
   max-width: fit-content;
+  transition: 0.3s linear;
 }
 @media screen and (min-width: 1024px) {
   .footer__copy__container ul li {
     width: calc(50% - 12px);
   }
 }
-.footer__copy__container ul li a {
-  transition: 0.3s linear;
-}
-.footer__copy__container ul li a:hover {
+.footer__copy__container ul li:hover {
   color: #242526;
+  text-decoration-color: #242526;
 }
 .footer__copy__container .lumios {
   display: flex;

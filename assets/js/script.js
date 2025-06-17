@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	productSliderInit();
 	reviewsSliderInit();
 socialsSliderInit();
+prettyScroll();
 });
 
 
@@ -264,6 +265,35 @@ const socialsSliderInit = () =>{
   },
     });
 }
+const prettyScroll = () => {
+	document.querySelectorAll('a[href^="#"]').forEach(link => {
+			link.addEventListener('click', function(e) {
+					e.preventDefault();
 
+					const href = this.getAttribute('href').substring(1);
+					const scrollTarget = document.getElementById(href);
+
+					if (!scrollTarget) return;
+
+					const header = document.querySelector('header');
+					const fixedHeader = document.querySelector('.header__bottom');
+
+					const topOffset = header?.offsetHeight || 0;
+					const fixedOffset = fixedHeader?.offsetHeight || 0;
+
+					const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+					const elementPosition = scrollTarget.getBoundingClientRect().top;
+
+					const offsetPosition = isDesktop 
+							? elementPosition - fixedOffset 
+							: elementPosition - topOffset;
+
+					window.scrollBy({
+							top: offsetPosition,
+							behavior: 'smooth'
+					});
+			});
+	});
+};
 
 

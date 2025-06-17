@@ -28,6 +28,7 @@
 		border-radius: 0px 0px 32px 32px;
 		background: #EAE8E6;
 		position: relative;
+		padding: 20px 0;
 		@media screen and (max-width:1023.9px) {
 			padding: 10px;
 		}
@@ -58,7 +59,7 @@
 			z-index: 1;
 			position: relative;
 			@media screen and (min-width:768px) {
-				max-width: 174px;
+				max-width: 138px;
 			}
 		}
 	}
@@ -138,8 +139,6 @@
 						@media screen and (min-width:1024px){
 							height: 100%;
 							display: inline-block;
-							padding: 31px 0px;
-							
 							&:hover{
 							color: $--hover-color;
 							}

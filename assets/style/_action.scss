@@ -15,6 +15,14 @@
 			@media screen and (min-width:768px) {
 				max-width: fit-content;
 			}
+			svg path{
+				transition: .3s linear;
+			}
+			&:hover{
+				svg path{
+					fill: $--white;
+				}
+			}
 		}
 		&__rows{
 			display: flex;
